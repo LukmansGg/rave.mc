@@ -1,0 +1,100 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran elemen */
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    position: relative;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 1vh;
+    font-size: 2.5rem;
+    top: -1rem;
+}
+.banner {
+    position: relative;
+    background-color: #333;
+    width: 100%; /* Lebar 100% layar */
+    height: 200px; /* Sesuaikan jika ingin 50% tinggi layar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.gradient {
+    background: linear-gradient(to bottom, #333, #fff);
+    width: 100%; /* Lebar 100% layar */
+    height: 10px; /* Sesuaikan jika ingin 50% tinggi layar */
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none; /* Hilangkan garis bawah */
+    color: #ffca76; /* Warna teks mengikuti elemen induk */
+}
+
+a:focus,
+a:hover,
+a:active {
+    color: inherit; /* Warna tetap seperti elemen induk saat fokus atau aktif */
+    outline: none; /* Hilangkan outline biru */
+}
+
+.white_page {
+    background-color: white;
+    width: 100%; /* Lebar 100% layar */
+    height: 10px; /* Sesuaikan jika ingin 50% tinggi layar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ifrit_banner {
+    position: absolute;
+    left: 10px;
+    top: -90px;
+}
+
+.ifrit {
+    width: 340px;
+    height: 400px;
+}
+
+.hots_content {
+}
+
+.all_mods {
+    padding: 0.5rem;
+    display: grid; /* Gunakan Grid untuk tata letak */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(160px, 130px)
+    ); /* Kolom fleksibel */
+    gap: 0.5rem 1rem; /* Jarak antar elemen */
+    width: 100%;
+    position: relative; /* Untuk memastikan hover tidak merusak tata letak */
+}
+
+@media (max-width: 768px) {
+    .all_mods {
+        width: 95%;
+    }
+}
