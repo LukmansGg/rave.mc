@@ -405,6 +405,7 @@
 
     .updates {
         left: 0; /* Pusatkan elemen untuk tampilan handphone */
+        top: 5%;
     }
 
     .pack_icon {
