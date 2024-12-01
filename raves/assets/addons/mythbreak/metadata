@@ -1,0 +1,18 @@
+{
+  "name": "MythBreak : Dry and Blossom",
+  "description": "Mythbreak addon is about fantasy world where many Fantasy mythical creatures live. This addon will have some remake function of my old addon.",
+  "version": "1.0.0",
+  "star": 4.47,
+  "update": [
+    "Scraptor",
+    "Arachne & Spidermite",
+    "Zomboo & Enchanter",
+    "Drought Wyvern",
+    "Lunarian Dragon"
+  ],
+  "upload": [ 26, 4, 2023 ],
+  "download": {
+    "behavior": "https://link-target.net/349248/bp-mythbreak-v2-official",
+    "resource": "https://direct-link.net/349248/rp-mythbreak-v2-official&blid=142"
+  }
+}

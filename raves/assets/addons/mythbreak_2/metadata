@@ -1,0 +1,21 @@
+{
+  "name": "Mythical Break Addon V2",
+  "description": "the beta of mythbreak will be here. The beta will be separate with the official, every time you find bug please send comment below or you can direct comment to my YouTube Channel",
+  "version": "beta",
+  "star": 4.47,
+  "update": [
+    "Scraptor",
+    "Arachne & Spidermite",
+    "Zomboo & Enchanter",
+    "Drought Wyvern",
+    "Lunarian Dragon"
+  ],
+  "upload": [ 5, 1, 2023 ],
+  "download": {
+    "behavior": "https://link-hub.net/349248/bp-mytbreak-v2-betatest1",
+    "resource": "https://direct-link.net/349248/bp-mytbreak-v2-betatest&blid=142"
+  }
+}
+
+
+

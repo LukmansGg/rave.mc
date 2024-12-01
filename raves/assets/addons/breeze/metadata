@@ -1,0 +1,12 @@
+{
+  "name": "Breeze Addon",
+  "description": "A breeze is planned to be a hostile mob that attacks with wind charges. It is found in certain rooms in trial chambers. But in this addon Breeze spawn in overworld.",
+  "version": "1.0.0",
+  "star": 5,
+  "update": [
+    "Adding breeze for minecraft 1.21 concept addon"
+  ],
+  "upload": [ 1, 11, 2023 ],
+  "download": "https://link-hub.net/349248/breeze-addon"
+}
+

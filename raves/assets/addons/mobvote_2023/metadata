@@ -1,0 +1,17 @@
+{
+  "name": "Armadillo, Crab & Penguin | MobVote 2023 Addon",
+  "description": "Mob Vote 2023 has reveal 3 mob candidates. There are Armadillo, Crab and Penguin.",
+  "version": "1.0.0",
+  "star": 4.29,
+  "update": [
+    "Adding Armadillo",
+    "Adding Crab",
+    "Adding Penguin",
+    "Adding Wolf Armor"
+  ],
+  "upload": [ 12, 10, 2023 ],
+  "download": {
+    "behavior": "https://link-hub.net/349248/rp-mobvote",
+    "resource": "https://link-target.net/349248/bp-mobvote"
+  }
+}

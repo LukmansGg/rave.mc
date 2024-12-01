@@ -1,0 +1,23 @@
+{
+  "name": "Digital Monster Addon",
+  "description": "Bring digital monsters into your Minecraft world! explore and discover new landscapes full of adorable monsters!. Explore the world to find new digimon",
+  "version": "4.2.7",
+  "star": 4.69,
+  "update": [
+    "New: Patamon Line",
+    "$img:../raves/assets/addons/digimobs_4.2.7/patamon.png",
+    "New: Elecmon",
+    "New: Rotten Digimeat",
+    "",
+    "Fixed Digimon Flying",
+    "now Digimon like Tentomon, Patamon, and others can switch between flying and walking",
+    "Improve Battle HUD",
+    "Try now the battle, no button limits – move and control the camera freely during battle!",
+    "Remove netral type from digimon name"
+  ],
+  "upload": [ 30, 11, 2024 ],
+  "download": {
+    "behavior": "https://loot-link.com/s?3993d2f6",
+    "resource": "https://loot-link.com/s?e5c0f79b"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Aeon Fantasy : Fire Inflation Update",
+  "description": "Fantasy Addon that based on Final Fantasy Series. This addon have variable mobs that you (maybe) never seen in others addon ,unique taming system, unique crafting ways ,and etc.",
+  "version": "1.0.0",
+  "star": 3.83,
+  "update": [
+    "Fire Inflation Update",
+    "new Ifrit",
+    "Coactrice",
+    "Copper Gnome",
+    "Carbancle"
+  ],
+  "upload": [ 25, 6, 2024 ],
+  "download": {
+    "behavior": "https://loot-link.com/s?3993d2f6",
+    "resource": "https://loot-link.com/s?e5c0f79b"
+  }
+}
