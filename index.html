@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="raves/css/home.css" />
+        <link rel="stylesheet" href="raves/css/element.css" />
+        <script
+            src="https://kit.fontawesome.com/070c74b3df.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Lilita+One&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <script type="text/javascript" src="raves/mods.js"></script>
+        <header>
+            <h1 class="title">Rave's Collection</h1>
+            <div class="menu menu_button">
+                <div class="menubar1"></div>
+                <div class="menubar2"></div>
+                <div class="menubar3"></div>
+            </div>
+        </header>
+        <div class="banner">
+            <div class="ifrit_banner">
+                <!img class="ifrit" src="assets/ifrit2.png" />
+            </div>
+        </div>
+        <div class="gradient"></div>
+        <div class="white_page"></div>
+        <div class="hots_content">
+            <div class="label_title">
+                <p></p>
+                <p></p>
+                <i class="fa-solid fa-fire fire_hot_content"></i>
+                <p class="hot_addon_title"></p>
+            </div>
+            <img src="raves/assets/addons/aeon_fantasy/icon.png" class="pack_icon" />
+            <div class="description">
+                <p class="description_text"></p>
+                <div class="star_panel"></div>
+                <div class="labels">
+                    <div class="version_label hot_addon_version">0.0.0</div>
+                    <div class="new_label" onclick="showUpdate()">?</div>
+                </div>
+                <a class="hot_content_rp"><p class="download_rp"><i class="fa-solid fa-download"></i> RESCOURCE PACK</p></a>
+                <a class="hot_content_bp"><p class="download_bh"><i class="fa-solid fa-download"></i> BEHAVIOR PACK</p></a>
+            </div>
+            <div class="updates"><i class="paw_update fa-solid fa-paw" onclick="closeUpdate()""></i>
+                <h3 class="whatsnew">What's New?</h3>
+                <br>
+                
+            </div>
+            
+        </div>
+        <p class="more_project_title">View More Projects</p>
+        <div class="splitter"></div>
+        <div class="all_mods"></div>
+
+        <div class="menu_page">
+            <div class="menu_items">
+                <p class="menu_item">contact</p>
+                <p class="menu_item">digimobs</p>
+                <p class="menu_item">all project</p>
+                <p class="menu_item">
+                    <a href="https://www.youtube.com/@ravemongaming_reborn"
+                        ><i class="fa-brands fa-youtube"></i> Ravemon Gaming</a
+                    >
+                </p>
+                <p class="menu_item">
+                    <a href="https://www.youtube.com/@lukmanggcraft"
+                        ><i class="fa-brands fa-youtube"></i> LukmanGG Craft</a
+                    >
+                </p>
+            </div>
+        </div>
+        <script>
+            const menuButton = document.querySelector(".menu_button");
+            function toggleMenu() {
+                const menuPage = document.querySelector(".menu_page");
+                menuPage.classList.toggle("active");
+                menuButton.classList.toggle("change");
+
+                document.body.classList.toggle("no-scroll");
+                document.querySelectorAll(".menu_item").forEach(i => {
+                    i.classList.toggle("active");
+                });
+            }
+
+            menuButton.addEventListener("click", toggleMenu);
+        </script>
+        <script type="text/javascript" src="raves/program/hot_addon.js"></script>
+        <script type="text/javascript" src="raves/program/show_addons.js"></script>
+    </body>
+</html>
