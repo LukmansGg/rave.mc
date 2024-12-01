@@ -403,6 +403,10 @@
         align-items: center; /* Pusatkan elemen untuk tampilan handphone */
     }
 
+    .updates {
+        left: 0; /* Pusatkan elemen untuk tampilan handphone */
+    }
+
     .pack_icon {
         position: relative;
         top: -13px;
