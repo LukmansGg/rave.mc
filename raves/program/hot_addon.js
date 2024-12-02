@@ -93,8 +93,10 @@ function queryElement(string) {
 
 function showUpdate() {
   document.querySelector('.updates').style.display = 'block';
+  document.body.classList.toggle("no-scroll");
 }
 
 function closeUpdate() {
   document.querySelector('.updates').style.display = 'none';
+  document.body.classList.toggle("no-scroll");
 }
