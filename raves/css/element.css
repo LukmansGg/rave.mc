@@ -125,8 +125,7 @@
 }
 
 .version_label,
-.new_label,
-.star_panel {
+.new_label {
     font-size: 0.8rem;
     color: white;
     padding: 0.1rem 0.8rem;
@@ -142,12 +141,7 @@
     transform: scale(1.4);
     transition: transform 1s ease;
 }
-.star_panel {
-    max-width: 5rem;
-}
-
-.version_label,
-.star_panel {
+.version_label {
     background-color: #ffca76;
 }
 
