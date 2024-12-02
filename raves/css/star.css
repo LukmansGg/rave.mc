@@ -19,7 +19,7 @@
      text-align: center;
 }
  
-rating__stars {
+.rating__stars {
     display: flex;
     padding-bottom: 0.375em;
     position: relative;
