@@ -8,9 +8,7 @@
      --trans-dur: 0.3s;
 }
 
- .rating {
-     margin: auto;
-}
+ 
  .rating__display {
      font-size: 1em;
      font-weight: 500;
