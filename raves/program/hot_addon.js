@@ -43,6 +43,7 @@ async function updateHotAddon() {
   bp.setAttribute("href", hotAddon.download.behavior)
 
   const updates = document.querySelector(".updates")
+  document.body.classList.toggle("no-scroll");
   for (let update of hotAddon.update) {
     if(update.includes("$")) {
       let element = await queryElement(update)
