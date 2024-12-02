@@ -108,9 +108,7 @@ rating__stars {
          --bg: #17181c;
          --fg: #e3e4e8;
     }
-     .rating {
-         margin: auto;
-    }
+    
      .rating__star-stroke {
          stroke: #454954;
     }
