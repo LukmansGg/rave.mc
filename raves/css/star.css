@@ -18,10 +18,16 @@
      width: 100%;
      text-align: center;
 }
- .rating__stars {
-     display: flex;
-     padding-bottom: 0.375em;
-     position: relative;
+ 
+rating__stars {
+    display: flex;
+    padding-bottom: 0.375em;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
  .rating__star {
      display: block;
