@@ -1,5 +1,5 @@
 const hot_panel = document.querySelector(".hots_content");
-
+let starHover = false;
 function convertToDate([day, month, year]) {
   return new Date(year, month - 1, day);
 }
@@ -147,8 +147,14 @@ async function updateHotAddon() {
         }, 500)
 
   star_panel.addEventListener("mouseenter", () => {
-    star_panel.innerHTML = ``; // Clear the content
-    setupRating(hotAddon); // Call the rating function
+    if(starHover === false) {
+    star_panel.innerHTML = ``;
+    setupRating(hotAddon);
+    starHover = true;
+    }
+});
+  star_panel.addEventListener("mouseleave", () => {
+    starHover = false;
 });
   
   const rp = document.querySelector(".hot_content_rp")
