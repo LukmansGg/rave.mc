@@ -87,6 +87,11 @@ async function updateHotAddon() {
             count += 1;
         }, 500)
 
+  star_panel.addEventListener("hover", () => {
+    star_panel.innerHTML = ``;
+    rating(hotAddon);
+  })
+  
   const rp = document.querySelector(".hot_content_rp")
   rp.setAttribute("href", hotAddon.download.resource)
   const bp = document.querySelector(".hot_content_bp")
@@ -150,4 +155,65 @@ function showUpdate() {
 function closeUpdate() {
   document.querySelector('.updates').style.display = 'none';
   document.body.classList.toggle("no-scroll");
+}
+
+function rating(hotAddon) {
+  const star_panel = document.querySelector(".star_panel");
+  const starCount = Math.floor(hotAddon.star);
+
+  for (let i = 0; i < starCount; i++) {
+    const input = document.createElement("input");
+    input.id = `rating-${i}`;
+    input.classList.add("rating__input", `rating__input-${i}`);
+    input.type = "radio";
+    input.name = "rating";
+    input.value = i;
+
+    // Create the label element
+    const label = document.createElement("label");
+    label.classList.add("rating__label");
+    label.setAttribute("for", `rating-${i}`);
+    
+    // Create the SVG star inside the label
+    label.innerHTML = `
+        <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+            <g transform="translate(16,16)">
+                <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+            </g>
+            <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <g transform="translate(16,16) rotate(180)">
+                    <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                    <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                </g>
+                <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                    <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                    <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                    <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                    <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                    <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                </g>
+            </g>
+        </svg>
+        <span class="rating__sr">${i} star—Terrible</span>
+    `;
+
+    // Append the input and label directly to the parent container (e.g., star_panel)
+    star_panel.appendChild(input);
+    star_panel.appendChild(label);
+  }
+  const ratings = [
+            "Terrible",
+            "Bad",
+            "OK",
+            "Good",
+            "Excellent"
+        ];
+        const label = document.querySelector(".rating__display");
+        let count = 0;
+        const rating =setInterval(() => {
+            if(count >= ratings.length) return clearInterval(rating);
+            label.innerText = ratings[count];
+            console.log(ratings[count])
+            count += 1;
+        }, 500)
 }
