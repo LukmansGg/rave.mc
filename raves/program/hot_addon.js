@@ -87,10 +87,10 @@ async function updateHotAddon() {
             count += 1;
         }, 500)
 
-  star_panel.addEventListener("hover", () => {
-    star_panel.innerHTML = ``;
-    rating(hotAddon);
-  })
+  star_panel.addEventListener("mouseenter", () => {
+    star_panel.innerHTML = ``; // Clear the content
+    rating(hotAddon); // Call the rating function
+});
   
   const rp = document.querySelector(".hot_content_rp")
   rp.setAttribute("href", hotAddon.download.resource)
