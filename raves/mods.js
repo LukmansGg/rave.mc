@@ -1,4 +1,5 @@
 const addons = [
+  "digimobs_5.2.8",
   "digimobs_4.2.7",
   "digimobs_3.1.6",
   "digimobs_2.1.5",
