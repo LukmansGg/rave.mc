@@ -17,7 +17,9 @@
   ],
   "upload": [ 13, 12, 2024 ],
   "download": {
-    "behavior": "https://link-target.net/349248/digimobs-bedrock-beh",
-    "resource": "https://link-target.net/349248/digimobs-bedrock-res"
+    "behavior": "https://lootdest.org/s?794ac0bf",
+    "behavior2": "https://link-target.net/349248/digimobs-bedrock-beh",
+    "rescource": "https://lootdest.org/s?e1f32462",
+    "resource2": "https://link-target.net/349248/digimobs-bedrock-res"
   }
 }
