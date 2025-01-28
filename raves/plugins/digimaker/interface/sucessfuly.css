@@ -1,0 +1,110 @@
+.loader-container {
+    position: absolute;
+    top: -4px;
+    right: 20px;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+}
+
+.loader-item {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    color: inherit;
+    vertical-align: middle;
+    pointer-events: none;
+    font-size: 30px;
+    border: 3px solid #4361ba;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    animation: 1s loader-animation linear infinite;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+@keyframes loader-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.material-icons {
+    position: relative;
+    top: -5px;
+    left: 0px;
+}
+
+.loader-success-completed {
+    animation: none;
+    border-bottom-color: none;
+    border-color: #00b359;
+    border-width: 3px;
+    animation: fade-in-bck 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.loader-failure-completed {
+    animation: none;
+    border-bottom-color: none;
+    border-color: #ff6666;
+    border-width: 3px;
+    animation: fade-in-bck 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.loader-check-icon {
+    display: none;
+    font-size: 30px;
+}
+
+.loader-check-icon-completed {
+    display: block;
+    color: #00b359;
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.loader-failure-icon {
+    display: none;
+    font-size: 30px;
+}
+
+.loader-failure-icon-completed {
+    display: block;
+    color: #ff6666;
+    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-bck {
+    0% {
+        -webkit-transform: translateZ(80px);
+        transform: translateZ(80px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}

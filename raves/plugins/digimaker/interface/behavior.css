@@ -1,0 +1,669 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arvo", sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    color: #38bdf8;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#model-container {
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Form Section */
+form {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 1rem;
+    color: #f8fafc;
+    white-space: nowrap;
+}
+
+/* Input Fields */
+input {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    background: #334155;
+    color: #f8fafc;
+    font-size: 1rem;
+    text-align: center;
+}
+
+input:focus {
+    outline: 2px solid #38bdf8;
+    background: #1e293b;
+}
+
+/* Buttons (if added later) */
+button {
+    background: #38bdf8;
+    color: #1e293b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0284c7;
+}
+
+/* Container for Buttons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+/* Container for Buttons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping */
+    gap: 15px; /* Space between buttons */
+    justify-content: center; /* Center align the buttons */
+    max-width: 300px; /* Control the total width of the group */
+    margin: 20px auto;
+}
+
+/* Button Styling */
+.btn-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f8fafc;
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+/* Icons inside buttons */
+.btn-type i {
+    font-size: 1.2rem;
+    color: #38bdf8;
+}
+
+/* Hover effect for buttons */
+.btn-type:hover {
+    background-color: #38bdf8;
+    color: #1e293b;
+    border-color: #0284c7;
+}
+
+.type_selected {
+    background-color: #38bdf8;
+    color: #1e293b;
+    border-color: #0284c7;
+}
+
+/* Active state effect */
+.btn-type:active {
+    transform: scale(0.95);
+}
+
+.digimom-type-group {
+    position: relative;
+    top: 10px;
+    left: 0px;
+}
+
+.digimon-type {
+    position: relative;
+    top: 25px;
+    text-align: center;
+}
+/* Dropdown Style */
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    background: #334155;
+    color: #f8fafc;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none; /* Remove default browser style */
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+.custom-select:focus {
+    outline: 2px solid #38bdf8;
+    background: #1e293b;
+}
+
+/* Container for Elements */
+.element-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 20px;
+    justify-content: center; /* Center the buttons */
+    margin: 20px auto;
+}
+
+/* General Button Style */
+.btn-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    text-transform: capitalize;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effects */
+.btn-element:hover {
+    transform: translateY(-5px); /* Slight lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific Colors for Each Element */
+.btn-element.fire {
+    background: #f87171; /* Red */
+}
+
+.btn-element.thunder {
+    background: #facc15; /* Yellow */
+}
+
+.btn-element.darkness {
+    background: #4b5563; /* Gray/Black */
+}
+
+.btn-element.earth {
+    background: #a3e635; /* Greenish-Brown */
+}
+
+.btn-element.ice {
+    background: #60a5fa; /* Light Blue */
+}
+
+.btn-element.light {
+    background: #fde047; /* Bright Yellow */
+}
+
+.btn-element.metal {
+    background: #64748b; /* Metallic Gray */
+}
+
+.btn-element.none {
+    background: #d1d5db; /* Metallic Gray */
+}
+
+.btn-element.nature {
+    background: #22c55e; /* Fresh Green */
+}
+
+.btn-element.water {
+    background: #38bdf8; /* Aqua Blue */
+}
+
+.btn-element.wind {
+    background: #86efac; /* Light Green */
+}
+.btn-element-selected {
+    background: linear-gradient(135deg, #38bdf8, #fde047); /* Gradasi warna */
+    color: #1e293b; /* Warna teks lebih gelap untuk kontras */
+    transform: translateY(-5px) scale(1.1); /* Efek angkat dan perbesar */
+    box-shadow:
+        0 8px 15px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(38, 182, 245, 0.5); /* Glow lembut */
+    border: 2px solid #ffffff; /* Tambahkan border putih */
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Tambahkan efek hover pada tombol yang sudah dipilih */
+.btn-element-selected:hover {
+    background: linear-gradient(
+        135deg,
+        #fde047,
+        #38bdf8
+    ); /* Balik arah gradasi */
+    box-shadow:
+        0 10px 20px rgba(255, 255, 255, 0.7),
+        0 0 15px rgba(38, 182, 245, 0.7); /* Glow lebih terang */
+    border-color: #38bdf8; /* Ubah border ke biru muda */
+}
+
+/* Container for Properties */
+.property-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    gap: 10px;
+    justify-items: center; /* Center the buttons */
+    margin: 20px auto;
+}
+
+/* General Button Style */
+.btn-property {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    text-transform: capitalize;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effects */
+.btn-property:hover {
+    transform: translateY(-5px); /* Slight lift */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific Colors for Each Property */
+.btn-property.dragon {
+    background: #ea580c; /* Orange */
+}
+
+.btn-property.aquatic {
+    background: #38bdf8; /* Blue */
+}
+
+.btn-property.insect {
+    background: #9ca3af; /* Gray */
+}
+
+.btn-property.plant {
+    background: #10b981; /* Green */
+}
+
+.btn-property.beast {
+    background: #f59e0b; /* Yellow */
+}
+
+.btn-property.machine {
+    background: #64748b; /* Steel Gray */
+}
+
+.btn-property.holy {
+    background: #fef08a; /* Light Yellow */
+}
+
+.btn-property.dark {
+    background: #6b7280; /* Dark Gray */
+}
+
+.btn-property.bird {
+    background: #93c5fd; /* Light Blue */
+}
+
+.btn-property.none {
+    background: #d1d5db; /* Light Gray */
+    color: #4b5563; /* Darker Gray */
+}
+
+.btn-property-selected {
+    background: radial-gradient(
+        circle,
+        #38bdf8,
+        #1e293b
+    ); /* Gradien radial biru ke gelap */
+    color: #ffffff; /* Teks putih */
+    transform: scale(1.15); /* Membesar saat terpilih */
+    box-shadow:
+        0 5px 15px rgba(56, 189, 248, 0.5),
+        0 0 10px rgba(30, 41, 59, 0.7); /* Glow biru dengan bayangan gelap */
+    border: 3px solid transparent; /* Border dinamis */
+    background-clip: padding-box; /* Agar border terlihat dinamis */
+    position: relative;
+    overflow: hidden; /* Membatasi efek di dalam tombol */
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Efek hover untuk tombol terpilih */
+.btn-property-selected:hover {
+    transform: scale(1.2); /* Membesar sedikit lebih banyak */
+    box-shadow:
+        0 8px 20px rgba(56, 189, 248, 0.6),
+        0 0 20px rgba(30, 41, 59, 0.8); /* Bayangan lebih dramatis */
+    border-color: #38bdf8; /* Border berubah menjadi biru muda */
+}
+
+/* Tambahkan efek animasi di dalam tombol */
+.btn-property-selected::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        rgba(56, 189, 248, 0.2),
+        rgba(30, 41, 59, 0)
+    );
+    z-index: 0;
+    animation: rotate-glow 3s linear infinite;
+}
+
+/* Animasi glow */
+@keyframes rotate-glow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tambahkan agar elemen teks tetap di atas */
+.btn-property-selected span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 768px) {
+    .property-group {
+        grid-template-columns: repeat(
+            2,
+            1fr
+        ); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .property-group {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+
+/* General Button Style */
+.component {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+    margin-bottom: 5px;
+}
+
+.component:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.component-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.detail-component {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #1e293b;
+    color: #f8fafc;
+    display: none;
+    z-index: -5;
+}
+
+.detail-component-input {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    background: #334155;
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+.detail-component-input:focus {
+    outline: 2px solid #38bdf8;
+}
+
+.detail-component-label {
+    font-size: 1rem;
+    color: #f8fafc;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.hide-component {
+    display: none;
+}
+
+.show-component {
+    display: block;
+}
+
+.current-family {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    gap: 5px;
+    justify-items: center; /* Center the buttons */
+
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.family:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.family {
+    margin: 0;
+    padding: 0px 6px;
+    background-color: #334155;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.component-toggle {
+    position: relative;
+    left: 20%;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    input {
+        display: none;
+
+        + label {
+            height: 100%;
+            width: 100%;
+            > .status-switch {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background-color: #334155;
+                color: white;
+                transition: all 0.5s ease;
+                padding: 3px;
+                border-radius: 3px;
+
+                &:before,
+                &:after {
+                    border-radius: 2px;
+                    height: calc(100% - 6px);
+                    width: calc(50% - 3px);
+                    display: flex;
+                    align-items: center;
+                    position: absolute;
+                    justify-content: center;
+                    transition: all 0.3s ease;
+                }
+
+                &:before {
+                    background-color: white;
+                    color: #334155;
+                    box-shadow: 0 0 4px 4px rgba(#000, 0.2);
+                    left: 3px;
+                    z-index: 10;
+                    content: attr(data-unchecked);
+                }
+
+                &:after {
+                    right: 0;
+                    content: attr(data-checked);
+                }
+            }
+        }
+
+        &:checked + label > .status-switch {
+            background-color: #38bdf8;
+
+            &:after {
+                left: 0;
+                content: attr(data-unchecked);
+            }
+
+            &:before {
+                color: #38bdf8;
+                left: 50%;
+                content: attr(data-checked);
+            }
+        }
+    }
+}
+
+/* Container Styling */
+.option-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Label Styling */
+.option-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e293b; /* Dark blue */
+}
+
+/* Dropdown Styling */
+.option-dropdown {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background-color: #f8fafc; /* Light background */
+    color: #1e293b; /* Text color */
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    appearance: none; /* Remove default styles */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    cursor: pointer;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Hover and Focus Effects */
+.option-dropdown:hover {
+    border-color: #38bdf8; /* Light blue on hover */
+}
+
+.option-dropdown:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
