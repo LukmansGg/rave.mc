@@ -45,7 +45,7 @@ function processing(sucess) {
         digimon: digimon, geometry: geometry
       };
       const queryString = new URLSearchParams(data).toString();
-      window.location.href = `raves/plugins/digimaker/behavior.html?${queryString}`;
+      window.location.href = `/behavior.html?${queryString}`;
     },
       Math.floor(Math.random()*5000));
   } else {
