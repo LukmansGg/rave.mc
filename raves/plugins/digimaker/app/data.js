@@ -1,0 +1,2 @@
+let geometry = "";
+let digimon = "";
