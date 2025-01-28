@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RAVE-MC</title>
+        <link rel="icon" href="rave.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="interface/sucessfuly.css" />
+        <link rel="stylesheet" href="interface/entity_page.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <script
+            src="https://kit.fontawesome.com/070c74b3df.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Lilita+One&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <script src="app/data.js"></script>
+        <div class="container">
+            <h1>RAVE-MC</h1>
+            <label for="digimon">Digimon</label>
+            <input
+                id="digimon"
+                class="digimon"
+                placeholder="Enter Digimon name"
+            />
+
+            <label for="geometry">Geometry</label>
+            <input
+                id="geometry"
+                class="geometry"
+                placeholder="Enter Geometry JSON"
+            />
+
+            <label for="animation">Animation</label>
+            <input
+                id="animation"
+                class="animation"
+                placeholder="Enter Animation"
+            />
+
+            <button onclick="process()">Submit</button>
+
+            <div class="geo_preview" id="geo_preview">
+                <div class="geo_result">Create your own digimon...</div>
+                <div class="loader-container"></div>
+            </div>
+        </div>
+
+        <script src="app/program.js"></script>
+    </body>
+</html>
