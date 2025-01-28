@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arvo", sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    color: #38bdf8;
+    margin-bottom: 1rem;
+}
+
+.container {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #334155;
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: 2px solid #38bdf8;
+}
+
+button {
+    background: #38bdf8;
+    color: #1e293b;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0.5rem 0;
+}
+
+button:hover {
+    background: #0284c7;
+}
+
+.geo_preview {
+    position: relative;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #0f172a;
+    border-radius: 5px;
+    overflow: auto;
+    max-height: 200px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.geo_result {
+    text-align: center;
+}
+
+.geo_result {
+    padding-right: 60px;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #38bdf8;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #0284c7;
+  }
