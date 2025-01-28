@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RAVE-MC</title>
+        <link rel="icon" href="rave.ico" type="image/x-icon" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/146/three.min.js"></script>
+        <link rel="stylesheet" href="sucessfuly.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link rel="stylesheet" href="interface/behavior.css" />
+        <script
+            src="https://kit.fontawesome.com/070c74b3df.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Lilita+One&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <script src="app/data.js"></script>
+        <h1 class="digimon">Digimon</h1>
+        <div id="model-container" style="width: 100%; height: 500px"></div>
+        <p>STATE</p>
+        <form>
+            <div class="form-group">
+                <label for="max-health">Health Default</label>
+                <input
+                    id="default-health"
+                    type="number"
+                    placeholder="Enter health default"
+                />
+            </div>
+            <div class="form-group">
+                <label for="max-health">Health per Level</label>
+                <input
+                    id="level-health"
+                    type="number"
+                    placeholder="Enter health per level"
+                />
+            </div>
+            <div class="form-group">
+                <label for="max-level">Max Level</label>
+                <input
+                    id="max-level"
+                    type="number"
+                    placeholder="Enter max level"
+                />
+            </div>
+            <p class="simulated-max-health">Max Health :</p>
+        </form>
+        <div class="digimom-type-group">
+            <p class="digimon-type">Digimon Stage</p>
+            <br />
+            <div class="button-group button-stage-group">
+                <button class="btn-type" data-type="baby">
+                    <i class="fa-solid fa-egg"></i> Baby
+                </button>
+                <button class="btn-type" data-type="in-training">
+                    <i class="fa-solid fa-child"></i> In Training
+                </button>
+                <button class="btn-type type_selected" data-type="rookie">
+                    <i class="fa-solid fa-user"></i> Rookie
+                </button>
+                <button class="btn-type" data-type="champion">
+                    <i class="fa-solid fa-shield"></i> Champion
+                </button>
+            </div>
+        </div>
+        <p class="digimon-element">Digimon Element</p>
+        <div class="element-group">
+            <button class="btn-element fire">
+                <i class="fa-solid fa-fire"></i> Fire
+            </button>
+            <button class="btn-element thunder">
+                <i class="fa-solid fa-bolt"></i> Thunder
+            </button>
+            <button class="btn-element darkness">
+                <i class="fa-solid fa-moon"></i> Darkness
+            </button>
+            <button class="btn-element earth">
+                <i class="fa-solid fa-mountain"></i> Earth
+            </button>
+            <button class="btn-element ice">
+                <i class="fa-solid fa-snowflake"></i> Ice
+            </button>
+            <button class="btn-element light">
+                <i class="fa-solid fa-sun"></i> Light
+            </button>
+            <button class="btn-element metal">
+                <i class="fa-solid fa-gears"></i> Metal
+            </button>
+            <button class="btn-element nature">
+                <i class="fa-solid fa-leaf"></i> Nature
+            </button>
+            <button class="btn-element water">
+                <i class="fa-solid fa-droplet"></i> Water
+            </button>
+            <button class="btn-element wind">
+                <i class="fa-solid fa-wind"></i> Wind
+            </button>
+            <button class="btn-element none">
+                <i class="fa-solid fa-ban"></i> None
+            </button>
+        </div>
+        <p class="digimon-propertie">Digimon Type</p>
+        <div class="property-group">
+            <button class="btn-property dragon">
+                <i class="fa-solid fa-dragon"></i> Dragon
+            </button>
+            <button class="btn-property aquatic">
+                <i class="fa-solid fa-water"></i> Aquatic
+            </button>
+            <button class="btn-property insect">
+                <i class="fa-solid fa-spider"></i> Insect
+            </button>
+            <button class="btn-property plant">
+                <i class="fa-solid fa-leaf"></i> Plant
+            </button>
+            <button class="btn-property beast">
+                <i class="fa-solid fa-paw"></i> Beast
+            </button>
+            <button class="btn-property machine">
+                <i class="fa-solid fa-cogs"></i> Machine
+            </button>
+            <button class="btn-property holy">
+                <i class="fa-solid fa-cross"></i> Holy
+            </button>
+            <button class="btn-property dark">
+                <i class="fa-solid fa-moon"></i> Dark
+            </button>
+            <button class="btn-property bird">
+                <i class="fa-solid fa-feather"></i> Bird
+            </button>
+            <button class="btn-property none">
+                <i class="fa-solid fa-ban"></i> None
+            </button>
+        </div>
+        <br />
+        <button class="component">
+            unlock component <i class="fa-solid fa-pen-to-square"></i>
+        </button>
+        <br />
+        <div class="component-wrapper">
+            <button class="component" id="type-family">Type Family</button>
+            <div class="type-family-component hide-component detail-component">
+                <label class="family-label detail-component-label"
+                    >Family</label
+                >
+                <input
+                    class="family-input detail-component-input"
+                    placeholder="Enter family name"
+                />
+                <div class="current-family">
+                    <p class="family">mob</p>
+                    <p class="family">digimon</p>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="component-wrapper">
+            <button class="component" id="collision-box">Collision Box</button>
+            <div
+                class="collision-box-component hide-component detail-component"
+            >
+                <label class="collision-label detail-component-label"
+                    >Height</label
+                >
+                <input
+                    class="collision-input detail-component-input"
+                    placeholder="Enter height"
+                />
+                <label class="collision-label detail-component-label"
+                    >Width</label
+                >
+                <input
+                    class="collision-input detail-component-input"
+                    placeholder="Enter width"
+                />
+            </div>
+        </div>
+
+        <br />
+        <div class="component-wrapper">
+            <button class="component">Movement</button>
+            <div class="movement-box-component hide-component detail-component">
+                <label
+                    class="movement-label detail-component-label"
+                    for="options"
+                    >select movement type</label
+                >
+                <div class="option-selection">
+                    <select id="options" class="option-dropdown">
+                        <option value="1">navigation walk</option>
+                        <option value="2">navigation generic</option>
+                        <option value="3">navigation fly</option>
+                        <option value="4">navigation jump</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="component-wrapper">
+            <button class="component" id="evolution">Evolution</button>
+            <div class="evolution-component hide-component detail-component">
+                <label class="evolution-label detail-component-label"
+                    >level max require</label
+                >
+                <div class="toggle-require-level component-toggle">
+                    <input
+                        id="require-level"
+                        type="checkbox"
+                        name="require-level"
+                    />
+                    <label for="require-level">
+                        <div
+                            class="status-switch"
+                            data-unchecked="Off"
+                            data-checked="On"
+                        ></div>
+                    </label>
+                </div>
+                <label class="evolution-label detail-component-label"
+                    >type data require</label
+                >
+                <div class="toggle-require-data component-toggle">
+                    <input
+                        id="require-data"
+                        type="checkbox"
+                        name="require-data"
+                    />
+                    <label for="require-data">
+                        <div
+                            class="status-switch"
+                            data-unchecked="Off"
+                            data-checked="On"
+                        ></div>
+                    </label>
+                </div>
+                <label class="evolution-label detail-component-label"
+                    >become</label
+                >
+                <input
+                    class="evolution-input detail-component-input"
+                    placeholder="Enter entities id"
+                />
+            </div>
+        </div>
+        <br />
+
+        <button class="component">Attack</button>
+        <script src="app/behavior.js"></script>
+        <script src="app/render_model.js"></script>
+    </body>
+              </html>
+              
